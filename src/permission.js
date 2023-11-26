@@ -10,6 +10,8 @@ NProgress.configure({ showSpinner: false }) // NProgress Configuration
 
 const whiteList = ['/login', '/auth-redirect'] // no redirect whitelist
 
+// 路由守卫，beforeEach 是路由守卫 api 的其中一种。
+// next 继续
 router.beforeEach(async(to, from, next) => {
   // start progress bar
   NProgress.start()

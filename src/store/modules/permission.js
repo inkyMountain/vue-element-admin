@@ -50,6 +50,7 @@ const actions = {
   generateRoutes({ commit }, roles) {
     return new Promise(resolve => {
       let accessedRoutes
+      // 通常在这里有接口请求，确定用户有哪些菜单的权限。
       if (roles.includes('admin')) {
         accessedRoutes = asyncRoutes || []
       } else {
